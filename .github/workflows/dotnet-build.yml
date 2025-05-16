@@ -16,7 +16,7 @@ jobs:
 
       # Script personalizado
       - name: Executar script personalizado
-        run: |
+        run: 
           echo "Iniciando o desafio de GitHub Actions..."
           date
           echo "Listando arquivos no repositório:"
