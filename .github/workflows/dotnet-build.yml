@@ -1,0 +1,23 @@
+name: Teste de Actions
+
+on:
+  push:
+  schedule:
+    - cron: '0 * * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      # Action pré-existente: checkout do repositório
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      # Script personalizado
+      - name: Executar script personalizado
+        run: |
+          echo "Iniciando o desafio de GitHub Actions..."
+          date
+          echo "Listando arquivos no repositório:"
+          ls -la
